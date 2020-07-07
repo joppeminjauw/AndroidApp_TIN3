@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/csgoFragment">
+    <fragment
+        android:id="@+id/csgoFragment"
+        android:name="com.example.calesports.ui.csgo.CsgoFragment"
+        android:label="Cryptonic - CS:GO">
+        <action
+            android:id="@+id/action_csgoFragment_to_matchInfoFragment"
+            app:destination="@id/matchInfoFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/dotaFragment"
+        android:name="com.example.calesports.ui.dota.DotaFragment"
+        android:label="Cryptonic - Dota 2">
+        <action
+            android:id="@+id/action_dotaFragment_to_matchInfoFragment"
+            app:destination="@id/matchInfoFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/lolFragment"
+        android:name="com.example.calesports.ui.lol.LolFragment"
+        android:label="Cryptonic - League of Legends">
+        <action
+            android:id="@+id/action_lolFragment_to_matchInfoFragment"
+            app:destination="@id/matchInfoFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/matchInfoFragment"
+        android:name="com.example.calesports.ui.matchInfo.MatchInfoFragment"
+        android:label="MatchInfoFragment" >
+        <argument
+            android:name="match"
+            app:argType="com.example.calesports.database.entity.Match" />
+        <action
+            android:id="@+id/action_matchInfoFragment_to_dotaFragment"
+            app:destination="@id/dotaFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_matchInfoFragment_to_lolFragment"
+            app:destination="@id/lolFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_matchInfoFragment_to_csgoFragment"
+            app:destination="@id/csgoFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right" />
+    </fragment>
+    <action
+        android:id="@+id/action_global_csgoFragment"
+        app:destination="@id/csgoFragment"
+        app:enterAnim="@anim/slide_in_left"
+        app:exitAnim="@anim/slide_out_right" />
+    <action
+        android:id="@+id/action_global_lolFragment"
+        app:destination="@id/lolFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left" />
+    <action
+        android:id="@+id/action_global_dotaFragment"
+        app:destination="@id/dotaFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left" />
+</navigation>

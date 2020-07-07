@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Cryptonic</string>
+    <string name="Dota">Dota 2</string>
+    <string name="LoL">LoL</string>
+    <string name="CSGO">CS:GO</string>
+    <string name="vs">VS</string>
+</resources>

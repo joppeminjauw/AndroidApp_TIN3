@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_csgo"
+        android:icon="@drawable/csgo"
+        android:title="@string/CSGO" />
+
+    <item
+        android:id="@+id/navigation_lol"
+        android:icon="@drawable/lol"
+        android:title="@string/LoL" />
+
+<!--    <item
+        android:id="@+id/navigation_dota"
+        android:icon="@drawable/dota"
+        android:title="@string/Dota" />-->
+</menu>
